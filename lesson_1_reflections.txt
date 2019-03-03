@@ -1,0 +1,18 @@
+installed git
+command line e.g. cd .. cd ~, mkdir, rm, mv, pwd, subl xxxx
+FC 2 files > version control
+
+1. how could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+it is easiler to check the error, what has been amended
+
+2. What do you think are the pros and cons of manually choosing when to create a commit, like you do in git, vs having versions automatically saved, like google docs does?
+It gives you opportunity to leave a comment, you can identify significant changes at each commit, it is more indicative, and you can control the numbers of commit
+
+commit record changes in multiple files, in repository
+git log --stat
+git diff xxx xxx
+q = quit
+
+3. Why do you think some version control systems like Git allow saving multiple files in one commit, while others treat each file separately?
+Allowing saving multiple files in one commit allows you to tract related changes in multiple files easily. And you don't need to waste time to dig all files to view the changes.
+
