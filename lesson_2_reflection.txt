@@ -1,0 +1,50 @@
+1. What happens when you initialize a repository? Why do you need to do it?
+You will get a empty .git repository. Then you need to create a commit and define which file to track.
+
+git init > create git repository
+git status
+git add xxx.txt > add files to the staging area
+
+
+2. How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+staging area allow you to add changes to a commit before you create a commit. so you are allowed to choose change which are logically seperated from the others and create a commit, instead of being forced to create a commit with all the changes in the directory.
+
+git diff > compare working directory and staging
+git diff --staged > compare staging and last commit
+git reset --hard > discard changes in the working directory and staging area
+
+3. How can you use the staging area to make sure you have one commit per logical
+change?
+You can add files to commit stage and compare using git diff --staged to make sure there is only one logical change between the staging area and the newest commit
+
+git branch > check the branch info
+git branch easy_mode > create a new branch called easy-mode
+git checkout easy_mode > checkout a branch
+
+4. What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+When you want to do some experimental testing or introduce a trail version, while keeping your master branch.
+
+git log --graph --oneline
+git log --graph --simplify-by-decoration --all
+gitk --all 
+gitk --all --simplify-by-decoration
+git checkout -b new branch name = git branch xxx, git checkout xxxx
+
+5. How do the diagrams help you visualize the branch structure?
+If you did not create a new branch, the new commit is not traceable and will be lost since it is not reachable by the other heads/tips of the other branch. Commit only knows their parents and trace back to the commit without parents, i.e. the initial commit.
+
+git checkout a
+git merge a b
+conflict > only space, not tab
+git show [commit_id] tell the difference between the commit and its parent
+git branch -d coins >>to delete a branch, the label, but commit will remain
+
+6. What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+All the changes are retained to keep all the new functions and retain the deletion.
+
+7. What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+Pros are automatic merging save you times. Only conflict will be prompted to ask for user input. cons are sometimes program cannot identity conflict and bug and merge them in.
